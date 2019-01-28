@@ -1,16 +1,18 @@
 import React from 'react';
+import autosize from "autosize";
 
 export default class TQValueCalculator extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = ({result:0});
-    this.input = React.createRef();
+    this.textarea = React.createRef();
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount(){
-    this.input.current.focus();
+    this.textarea.focus();
+    autosize(this.textarea);
   }
 
   handleChange(event) {
@@ -18,8 +20,8 @@ export default class TQValueCalculator extends React.Component {
     this.setState({result: 0})
     var x = 0
 
-    for (var i = 0; i < this.input.current.value.length; i++) {
-      x = x + this.calculateTQValue(this.input.current.value.toLowerCase().charAt(i))
+    for (var i = 0; i < this.textarea.value.length; i++) {
+      x = x + this.calculateTQValue(this.textarea.value.toLowerCase().charAt(i))
     }
 
     this.setState(prevState=>({result: prevState.result + x}))
@@ -30,16 +32,16 @@ export default class TQValueCalculator extends React.Component {
 
    return(
       <div id="calculator">
-        
-          <input
-            type="text"
+          
+          <textarea
             name="word"
             placeholder='Type here...'
             defaultValue = ''
-            ref={this.input}
+            ref={c => (this.textarea = c)}
+            rows={1}
             onChange={this.handleChange}
             >
-          </input>
+          </textarea>
       
          <p className="result">
             {this.state.result}

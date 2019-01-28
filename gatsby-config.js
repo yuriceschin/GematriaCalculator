@@ -1,6 +1,6 @@
 module.exports = {
 siteMetadata: {
-    title: 'Trigrammaton English Gematria',
+    title: 'TQ Gematria Calculator',
     pathPrefix: "/TQGematria",
 },
 plugins: [
@@ -13,7 +13,7 @@ plugins: [
 	{
 	resolve: `gatsby-plugin-manifest`,
 	    options: {
-	        name: "Trigrammaton English Gematria",
+	        name: "TQ Gematria Calculator",
 	        short_name: "TQ Gematria",
 	        start_url: "/",
 	        background_color: "#fafbed",

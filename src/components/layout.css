@@ -48,16 +48,18 @@ blockquote{
 	margin: auto;
 	text-align: center;
 }
-#calculator input{
+#calculator textarea{
 	font-size: 48px;
-	width: 60%;
+	width: 90%;
 	border: none;
 	color:hsla(0,0%,0%,0.9);
 	margin-bottom: 2.5rem;
 	background: none;
 	text-align: center;
+	max-height:350px;
+    resize:none;
 }
-#calculator input:focus{
+#calculator textarea:focus{
 	outline: none;
 }
 p.result{

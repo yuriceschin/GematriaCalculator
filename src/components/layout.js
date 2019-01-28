@@ -12,7 +12,7 @@ export default ({ children }) => (
   <div>
   	<header>
       <Link to="/" id="title">
-        <h2>Trigrammaton English Gematria</h2>
+        <h2>TQ Gematria Calculator</h2>
       </Link>
       <ul>
         <ListLink to="/">Home</ListLink>
