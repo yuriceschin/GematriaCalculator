@@ -12,12 +12,12 @@ export default ({ children }) => (
   <div>
   	<header>
       <Link to="/" id="title">
-        <h2>TQ Gematria Calculator</h2>
+        <h1>TQ Gematria Calculator</h1>
       </Link>
       <ul>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
+        {/* <ListLink to="/contact/">Contact</ListLink> */}
       </ul>
     </header>
 

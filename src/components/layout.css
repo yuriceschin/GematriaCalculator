@@ -25,16 +25,17 @@ header a{
 header a#title:hover{
 	text-decoration: none;
 }
-header h2{
+header h1{
 	display: inline;
 }
-ul{
+header ul{
 	list-style: none;
 	float: right;
 }
-li{
+header li{
 	display: inline-block;
 	margin-right: 1rem;
+	margin-top: 0.6rem;
 }
 blockquote{
 	border-left: 0.28125rem solid #9c2485 !important;
@@ -50,13 +51,14 @@ blockquote{
 }
 #calculator textarea{
 	font-size: 48px;
+	line-height: 48px;
 	width: 90%;
 	border: none;
 	color:hsla(0,0%,0%,0.9);
 	margin-bottom: 2.5rem;
 	background: none;
 	text-align: center;
-	max-height:350px;
+	max-height:290px;
     resize:none;
 }
 #calculator textarea:focus{
@@ -69,10 +71,11 @@ p.result{
 }
 p.TQValues{
 	padding: 1rem;
-	border: 0.14rem solid #9c2485;
+	border-left: 0.28125rem solid #9c2485 !important;
 	font-weight: 600;
 	width: 100%;
 	text-align: justify-all;
+	word-spacing: 0.5rem;
 }
 
 /* Footer */
