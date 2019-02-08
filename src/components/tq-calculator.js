@@ -30,7 +30,7 @@ export default class TQValueCalculator extends React.Component {
 
   render(){
 
-   return(
+    return(
       <div id="calculator">
           
           <textarea
@@ -46,9 +46,11 @@ export default class TQValueCalculator extends React.Component {
          <p className="result">
             {this.state.result}
          </p>
+
       </div>
     )
   }
+
 
   // TQ Gematria Values
 
@@ -86,4 +88,4 @@ export default class TQValueCalculator extends React.Component {
       }
   }
 
-}  
+}

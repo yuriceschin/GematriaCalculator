@@ -24,6 +24,14 @@ plugins: [
 	        icon: "src/images/icon.png", // This path is relative to the root of the site.
 	    },
 	},
-	'gatsby-plugin-offline'
+	'gatsby-plugin-offline',
+	{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    `gatsby-transformer-csv`,
 ],
 }
