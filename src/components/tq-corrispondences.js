@@ -1,7 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
 
+const result = {this.propos.tqResult}
+
 export default () => (
+
   <StaticQuery
     query={graphql`
       query {
@@ -17,6 +20,7 @@ export default () => (
     `}
     render={data => (
         <div>
+        <p>{this.props.tqResult}</p>
         <table>
           <thead>
             <tr>

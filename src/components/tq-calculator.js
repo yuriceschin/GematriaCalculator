@@ -1,5 +1,6 @@
 import React from 'react';
 import autosize from "autosize";
+import TQCorrispondences from "../components/tq-corrispondences"
 
 export default class TQValueCalculator extends React.Component {
 
@@ -46,8 +47,11 @@ export default class TQValueCalculator extends React.Component {
          <p className="result">
             {this.state.result}
          </p>
-
+         
+         <TQCorrispondences tqResult={this.state.result}/>
+      
       </div>
+      
     )
   }
 
