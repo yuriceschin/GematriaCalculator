@@ -94,5 +94,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b1338e9f-ed78-4e0e-a448-66511312dff7/deploy-status)](https://app.netlify.com/sites/tqgematria/deploys)
+
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 # TQGematria
