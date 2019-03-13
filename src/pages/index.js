@@ -6,7 +6,8 @@ import Layout from "../components/layout";
 export default class TQCalculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { result: 0, data: [] };
+    this.state = { result: 0, data: [], searchedWord: [] };
+    this.timeout = 0;
     this.textarea = React.createRef();
     this.handleChange = this.handleChange.bind(this);
   }
@@ -14,6 +15,53 @@ export default class TQCalculator extends React.Component {
   componentDidMount() {
     this.textarea.focus();
     autosize(this.textarea);
+
+    this.hydrateStateWithLocalStorage();
+
+    // add event listener to save state to localStorage
+    // when user leaves/refreshes the page
+    window.addEventListener(
+      "beforeunload",
+      this.saveStateToLocalStorage.bind(this)
+    );
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(
+      "beforeunload",
+      this.saveStateToLocalStorage.bind(this)
+    );
+
+    // saves if component has a chance to unmount
+    this.saveStateToLocalStorage();
+  }
+
+  hydrateStateWithLocalStorage() {
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
+
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+
+  saveStateToLocalStorage() {
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
   }
 
   handleChange(event) {
@@ -40,8 +88,36 @@ export default class TQCalculator extends React.Component {
         });
 
         this.setState(prevState => ({ data: filteredData }));
+        //this.searchList = JSON.parse(localStorage.getItem("searched"));
       }
     );
+
+    //Save a word after it has been searched
+    if (this.timeout) clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => {
+      if (
+        this.textarea.value !== "" &&
+        isNaN(this.textarea.value) &&
+        this.state.searchedWord.indexOf(
+          this.textarea.value + "|" + this.state.result
+        ) === -1
+      ) {
+        if (this.state.searchedWord.length === 10) {
+          this.state.searchedWord.pop();
+        }
+        this.state.searchedWord.unshift(
+          this.textarea.value.substring(0, 20) +
+            (this.textarea.value.length >= 20 ? "..." : "") +
+            "|" +
+            this.state.result
+        );
+      }
+      localStorage.setItem(
+        "searchedWord",
+        JSON.stringify(this.state.searchedWord)
+      );
+      this.setState(prevState => ({ searchedWord: this.state.searchedWord }));
+    }, 2000);
   }
 
   render() {
@@ -59,6 +135,24 @@ export default class TQCalculator extends React.Component {
 
           <p className="result">{this.state.result}</p>
         </div>
+
+        {this.state.searchedWord.length > 1 && (
+          <div className="pastSearches">
+            <h4>Past searches:</h4>
+            <ul>
+              {this.state.searchedWord.map(word => {
+                var w = word.split("|")[0];
+                var n = word.split("|")[1];
+                return (
+                  <li key={word}>
+                    {w}
+                    <span>{n}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
 
         {this.state.data.length !== 0 && (
           <div>
