@@ -17,7 +17,7 @@ export default class TQCalculator extends React.Component {
     autosize(this.textarea);
 
     this.hydrateStateWithLocalStorage();
-    this.setState({ result: 0 });
+    this.setState({ result: 0, data: [] });
     // add event listener to save state to localStorage
     // when user leaves/refreshes the page
     window.addEventListener(
