@@ -115,3 +115,55 @@ footer {
   margin-top: 5rem;
   text-align: center;
 }
+
+/* Page Words Analysis */
+
+blockquote {
+  display: block;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+blockquote strong {
+  font-weight: 900;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table .header {
+  background-color: rgb(238, 238, 238);
+}
+
+.table .header div {
+  cursor: pointer;
+}
+
+.table .header,
+.table .row {
+  display: flex;
+}
+
+.table .header div,
+.table .row div {
+  flex: 1;
+  padding: 0.2rem 0.4em;
+  border: 1px solid rgb(238, 238, 238);
+}
+.sort-direction {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin: 3px 10px;
+}
+
+.sort-direction.asc {
+  border-bottom: 5px solid black;
+}
+
+.sort-direction.desc {
+  border-top: 5px solid black;
+}

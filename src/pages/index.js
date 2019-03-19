@@ -17,7 +17,7 @@ export default class TQCalculator extends React.Component {
     autosize(this.textarea);
 
     this.hydrateStateWithLocalStorage();
-
+    this.setState({ result: 0 });
     // add event listener to save state to localStorage
     // when user leaves/refreshes the page
     window.addEventListener(
@@ -27,6 +27,7 @@ export default class TQCalculator extends React.Component {
   }
 
   componentWillUnmount() {
+    this.setState({ result: 0 });
     window.removeEventListener(
       "beforeunload",
       this.saveStateToLocalStorage.bind(this)
@@ -73,7 +74,14 @@ export default class TQCalculator extends React.Component {
 
     for (var i = 0; i < this.textarea.value.length; i++) {
       x =
-        x + this.calculateTQValue(this.textarea.value.toLowerCase().charAt(i));
+        x +
+        this.calculateTQValue(
+          this.textarea.value
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .charAt(i)
+        );
     }
     this.setState(
       prevState => ({
@@ -117,7 +125,7 @@ export default class TQCalculator extends React.Component {
         JSON.stringify(this.state.searchedWord)
       );
       this.setState(prevState => ({ searchedWord: this.state.searchedWord }));
-    }, 2000);
+    }, 1500);
   }
 
   render() {
