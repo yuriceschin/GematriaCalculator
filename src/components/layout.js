@@ -24,7 +24,7 @@ export default ({ children }) => (
     {children}
 
     <footer>
-      <p>Copyright 2019 © O.T.O. Italia. Tutti i diritti riservati.</p>
+      <p>Copyright 2020 © O.T.O. Italy. All rights reserved.</p>
     </footer>
   </div>
 );
