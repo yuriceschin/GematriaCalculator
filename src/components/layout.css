@@ -7,8 +7,8 @@ body > div {
   padding: 0 1rem;
 }
 a {
-  color: #9c2485 !important;
-  text-decoration: none !important;
+  color: #9c2485;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
@@ -25,6 +25,8 @@ li {
 /* Header */
 header {
   margin-bottom: 4rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 header a {
   text-shadow: none;
@@ -36,18 +38,76 @@ header a#title:hover {
 header h1 {
   display: inline;
 }
-header ul {
+header nav {
   list-style: none;
   float: right;
+  margin-top: 8px;
 }
+
 header li {
-  display: inline-block;
-  margin-right: 1rem;
-  margin-top: 0.6rem;
+  display: block;
+  float: left;
+  transition-duration: 0.5s;
+  margin-right: 2px;
 }
-blockquote {
-  border-left: 0.28125rem solid #9c2485 !important;
-  text-shadow: none;
+
+header li:hover,
+header li:focus-within {
+  cursor: pointer;
+}
+
+header li a {
+  padding: 5px 10px;
+}
+header li a.active,
+header li a:hover,
+nav > ul > li:hover > a {
+  background-color: #9c2485;
+  color: #fff;
+  text-decoration: none;
+}
+
+header ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-top: 2px;
+  display: none;
+  z-index: 999;
+}
+
+header ul li:hover > ul,
+header ul li:focus-within > ul,
+header ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+header ul li ul li {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header ul li ul li a {
+  display: block;
+  width: 100%;
+  background-color: rgb(236, 237, 218);
+  margin: 0;
+  border-top: 1px solid #fff;
+}
+
+header li li a.active,
+header li li a:hover {
+  background-color: rgb(236, 237, 218);
+  color: #9c2485;
+  text-decoration: underline;
+}
+
+header li:focus-within a {
+  outline: none;
 }
 
 /* Page Home Content */
@@ -166,4 +226,9 @@ blockquote strong {
 
 .sort-direction.desc {
   border-top: 5px solid black;
+}
+
+blockquote {
+  border-left: 0.28125rem solid #9c2485 !important;
+  text-shadow: none;
 }
