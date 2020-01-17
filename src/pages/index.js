@@ -165,7 +165,8 @@ export default class TQCalculator extends React.Component {
         {this.state.data.length !== 0 && (
           <div>
             <h4>
-              Other words from <i>Liber AL vel Legis</i> with the same value:
+              Other words from the <i>Holy Books of Thelema</i> with the same
+              value:
             </h4>
 
             <table>

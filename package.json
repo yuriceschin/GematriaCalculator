@@ -2,7 +2,7 @@
   "name": "tq-gematria-calculator",
   "private": true,
   "description": "A simple calculator of words's value based on the Trigrammaton Qabalah Gematria",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
