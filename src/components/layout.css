@@ -150,7 +150,7 @@ h4 {
 }
 .pastSearches {
   opacity: 0;
-  animation: Appear 2.5s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: Appear 2s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 @keyframes Appear {
   0% {

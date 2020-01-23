@@ -4,7 +4,9 @@ import "./layout.css";
 
 const ListLink = props => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={props.to} activeClassName="active">
+      {props.children}
+    </Link>
   </li>
 );
 
@@ -16,113 +18,50 @@ export default ({ children }) => (
       </Link>
       <nav role="navigation">
         <ul>
-          <li>
-            <Link to="/" activeClassName="active">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeClassName="active">
-              About
-            </Link>
-          </li>
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/about/">About</ListLink>
           <li>
             <Link
               to="/words-analysis/"
               activeClassName="active"
               partiallyActive={true}
             >
-              Holy Books Words Analysis
+              Holy Books Words Analysis <span class="sort-direction desc" />
             </Link>
             <ul className="dropdown">
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-al/"
-                  activeClassName="active"
-                >
-                  Liber AL vel Legis
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-b/"
-                  activeClassName="active"
-                >
-                  Liber B vel Magi
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-liberi/"
-                  activeClassName="active"
-                >
-                  Liber Liberi vel Lapidis Lazuli
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-portalucis/"
-                  activeClassName="active"
-                >
-                  Liber Porta Lucis
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-trigrammaton/"
-                  activeClassName="active"
-                >
-                  Liber Trigrammaton
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-cordiscinctiserpente/"
-                  activeClassName="active"
-                >
-                  Liber Cordis Cincti Serpente
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-stellaerubae/"
-                  activeClassName="active"
-                >
-                  Liber Stellæ Rubeæ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-tzaddi/"
-                  activeClassName="active"
-                >
-                  Liber Tzaddi vel Hamus Hermeticus
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-cheth/"
-                  activeClassName="active"
-                >
-                  Liber Cheth vel Vallum Abiegni
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-aash/"
-                  activeClassName="active"
-                >
-                  Liber A’ash vel Capricorni Pneumatici
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/words-analysis/words-analysis-liber-ararita/"
-                  activeClassName="active"
-                >
-                  Liber ARARITA
-                </Link>
-              </li>
+              <ListLink to="/words-analysis/words-analysis-liber-al/">
+                Liber AL vel Legis
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-b/">
+                Liber B vel Magi
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-liberi/">
+                Liber Liberi vel Lapidis Lazuli
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-portalucis/">
+                Liber Porta Lucis
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-trigrammaton/">
+                Liber Trigrammaton
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-cordiscinctiserpente/">
+                Liber Cordis Cincti Serpente
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-stellaerubae/">
+                Liber Stellæ Rubeæ
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-tzaddi/">
+                Liber Tzaddi vel Hamus Hermeticus
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-cheth/">
+                Liber Cheth vel Vallum Abiegni
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-aash/">
+                Liber A’ash vel Capricorni Pneumatici
+              </ListLink>
+              <ListLink to="/words-analysis/words-analysis-liber-ararita/">
+                Liber ARARITA
+              </ListLink>
             </ul>
           </li>
         </ul>
