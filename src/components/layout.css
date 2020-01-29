@@ -6,6 +6,11 @@ body > div {
   max-width: 960px;
   padding: 0 1rem;
 }
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 a {
   color: #9c2485;
   text-decoration: none;
@@ -255,6 +260,9 @@ blockquote {
   right: 20px;
   top: 20px;
   font-size: 30px;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 #offcanvas-root button {
@@ -263,6 +271,9 @@ blockquote {
   font-size: 30px;
   padding: 0;
   color: #9c2485;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 #offcanvas-root .overlay > div {
