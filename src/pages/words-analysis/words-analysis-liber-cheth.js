@@ -92,17 +92,17 @@ export default class A extends React.Component {
         </p>
         <div className="table">
           <div className="header">
-            <div onClick={this.onSort("word")}>
+            <div><button onClick={this.onSort("word")}>
               Word
-              <span className={`${this.setArrow("word")}`} />
+              <span className={`${this.setArrow("word")}`} /></button>
             </div>
-            <div onClick={this.onSort("value")}>
+            <div><button onClick={this.onSort("value")}>
               Value
-              <span className={this.setArrow("value")} />
+              <span className={this.setArrow("value")} /></button>
             </div>
-            <div onClick={this.onSort("count")}>
+            <div><button onClick={this.onSort("count")}>
               Count
-              <span className={this.setArrow("count")} />
+              <span className={this.setArrow("count")} /></button>
             </div>
           </div>
           <div className="body">

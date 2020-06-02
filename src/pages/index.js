@@ -139,6 +139,7 @@ export default class TQCalculator extends React.Component {
             ref={c => (this.textarea = c)}
             rows={1}
             onChange={this.handleChange}
+            aria-label="Type here..."
           />
 
           <p className="result">{this.state.result}</p>

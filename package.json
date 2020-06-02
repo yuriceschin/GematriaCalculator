@@ -37,7 +37,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.9.13",
-    "gh-pages": "^2.0.1"
+    "babel-plugin-react-native-web": "^0.12.2",
+    "gh-pages": "^3.0.0"
   }
 }

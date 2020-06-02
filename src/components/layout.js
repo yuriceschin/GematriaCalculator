@@ -19,7 +19,7 @@ export default ({ children }) => (
     {children}
 
     <footer>
-      <p>Copyright 2020 © O.T.O. Italy. All rights reserved.</p>
+      <p>Copyright <span>{(new Date().getFullYear())}</span> © O.T.O. Italy. All rights reserved.</p>
     </footer>
   </div>
 );

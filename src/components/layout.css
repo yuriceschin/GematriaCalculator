@@ -236,6 +236,12 @@ nav .menu-icon {
   margin: 3px 10px;
 }
 
+.table .header div button{
+  background:none;
+  border: none;
+  cursor: pointer;
+}
+
 .sort-direction.asc {
   border-bottom: 5px solid black;
 }
