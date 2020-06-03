@@ -27,13 +27,19 @@ plugins: [
 	        icon: "src/images/icon512.png", // This path is relative to the root of the site.
 	    },
 	},
-	'gatsby-plugin-offline',
+	{
+	resolve: `gatsby-plugin-offline`,
+		options: {
+			workboxConfig: {
+				globPatterns: ['**/*']
+			 },
+		},
+	},
 	{
       resolve: `gatsby-source-filesystem`,
       options: {
-		workboxConfig: {
-			globPatterns: ['**/*']
-		 }
+		name: `data`,
+        path: `${__dirname}/src/data/`
       },
     },
     `gatsby-transformer-csv`,
