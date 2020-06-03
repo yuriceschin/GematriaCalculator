@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberStellaerubaeCsv.edges,
+      data: this.props.data.allRecurrencesliberChethCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,18 +81,16 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Liber Stellæ Rubeæ - Words value and recurrences</h2>
+        <SEO title={"Liber Cheth vel Vallum Abiegni Words Analysis"} />
+        <h2>Liber Cheth vel Vallum Abiegni - Words value and recurrences</h2>
 
         <p>
-          There is a total of <strong>1006</strong> words in Liber Stellæ Rubeæ
-          and <strong>369</strong> different words (including numbers and &).
+          There is a total of <strong>673</strong> words in Liber Cheth vel
+          Vallum Abiegni and <strong>257</strong> different words (including
+          numbers and &).
           <br />
           Here you can find each word, its value based upon the TQ Gematria and
-          the number of times it appears in Liber Stellæ Rubeæ.
-          <br />
-          The planetary symbols have been omitted and the letters "ā", "Ī", "Ō"
-          and "ū" have been calculated as normal letters, but considered as
-          different letter in the count.
+          the number of times it appears in Liber Cheth vel Vallum Abiegni.
         </p>
         <div className="table">
           <div className="header">
@@ -125,7 +124,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberStellaerubaeCsv {
+    allRecurrencesliberChethCsv {
       edges {
         node {
           word

@@ -50,19 +50,16 @@ nav {
   float: right;
   margin-top: 8px;
 }
-
 nav li {
   display: block;
   float: left;
   transition-duration: 0.5s;
   margin-right: 2px;
 }
-
 nav li:hover,
 nav li:focus-within {
   cursor: pointer;
 }
-
 nav li a {
   padding: 5px 10px;
 }
@@ -73,14 +70,14 @@ nav > ul > li:hover > a {
   color: #fff;
   text-decoration: none;
 }
-
 nav ul li ul {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  margin-top: 2px;
-  display: none;
+  margin-top: 3px;
+  
   z-index: 999;
+  min-width: 100%;
+  white-space: nowrap;
 }
 
 nav ul li:hover > ul,
@@ -126,6 +123,40 @@ nav li a.active .menu-icon {
 }
 
 /* Page Home Content */
+#home-buttons {
+  margin: 5rem 0;
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  align-items: center;
+}
+
+#home-buttons a{
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(236, 237, 218);
+  color:hsla(0,0%,0%,0.73);
+  border-radius: 20px;
+  float: left;
+  width: 32%;
+  height: 200px;
+}
+
+#home-buttons a span{
+  font-size: 3rem;
+  color: #9c2485;
+}
+
+#home-buttons a:hover{
+  background: rgba(0, 0, 0,0.1);
+  text-decoration: none;
+}
+
+/* Page Calculator Content */
 
 #calculator {
   max-width: 100%;
@@ -133,8 +164,9 @@ nav li a.active .menu-icon {
   text-align: center;
 }
 #calculator textarea {
+  height: 52px;
   font-size: 48px;
-  line-height: 48px;
+  line-height: 46px;
   width: 90%;
   border: none;
   color: hsla(0, 0%, 0%, 0.9);
@@ -150,7 +182,6 @@ nav li a.active .menu-icon {
 p.result {
   font-size: 72px;
   color: #9c2485;
-  margin-bottom: 3rem;
 }
 p.TQValues {
   padding: 1rem;
@@ -159,13 +190,54 @@ p.TQValues {
   width: 100%;
   text-align: justify-all;
   word-spacing: 0.5rem;
+  clear: both;
+}
+.aboutvalues {
+  display: inline-block;
+  margin-right: 20px;
 }
 h4 {
   text-align: left;
 }
+#virtual-keyboard{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
+}
+.letterButtons button {
+  flex-flow: column wrap;
+  align-content: center;
+  flex-basis: 72px;
+  background: none;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  height: 36px;
+  border-radius: 3px;
+  border: 2px solid hsla(0, 0%, 0%, 0.9);
+  cursor: pointer;
+}
+.letterButtons button:hover {
+  background: rgba(0,0,0,0.1);
+}
+.letterButtons button:focus {
+  background: rgba(0,0,0,0.2);
+}
+.letterButtons button:focus-within {
+  outline: none;
+}
+.letterButtons button.clear {
+  width: 120px;
+  display: block;
+  margin: auto;
+}
 .pastSearches {
   opacity: 0;
+  width: 100%;
   animation: Appear 2s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  clear: both;
+  float: left;
 }
 @keyframes Appear {
   0% {
@@ -175,13 +247,32 @@ h4 {
     opacity: 1;
   }
 }
+.pastSearches button{
+  cursor: pointer;
+  border:none;
+  background: none;
+  color:#9c2485;
+  margin: 0;
+  padding: 0;
+}
+.pastSearches button:hover{
+  text-decoration: underline;
+}
+.pastSearches ul {
+  margin-bottom: 100px;
+}
 .pastSearches ul li {
   font-size: 1rem;
   margin-right: 20px;
+  float: left;
 }
 .pastSearches ul li span {
   color: #9c2485;
   margin-left: 5px;
+}
+
+.correspondences {
+  clear: both;
 }
 
 /* Footer */
@@ -189,9 +280,20 @@ h4 {
 footer {
   margin-top: 5rem;
   text-align: center;
+  clear: left;
 }
 
 /* Page Words Analysis */
+
+#holy-books ul{
+  list-style: disc;
+  padding-left: 20px;
+}
+#holy-books ul li{
+  display: list-item;
+  list-style: disc;
+  margin-bottom: 0;
+}
 
 blockquote {
   display: block;
@@ -209,10 +311,6 @@ blockquote strong {
 
 .table .header {
   background-color: rgb(238, 238, 238);
-}
-
-.table .header div {
-  cursor: pointer;
 }
 
 .table .header,
@@ -292,11 +390,15 @@ blockquote {
   float: left;
   width: 100%;
 }
+#offcanvas-root nav > ul > li{
+  border-bottom: 1px solid #9c2485;
+}
 #offcanvas-root nav ul li ul {
   display: block;
   visibility: visible;
   opacity: 1;
   margin-top: 0;
+  padding-left: 20px;
 }
 #offcanvas-root nav li,
 #offcanvas-root nav li a {
@@ -304,8 +406,16 @@ blockquote {
   width: 100%;
   margin-bottom: 0;
 }
-#offcanvas-root nav li a {
-  padding: 5px 15px;
+#offcanvas-root nav > ul > li > a {
+  font-weight: bold;
+}
+#offcanvas-root nav ul li ul li a {
+  padding: 5px 15px 5px 0;
+  background:none;
+  border-top: none;
+}
+#offcanvas-root .menu-icon{
+  display: none;
 }
 
 @media (max-width: 830px) {
@@ -316,3 +426,24 @@ blockquote {
     display: block;
   }
 }
+
+@media (max-width: 425px) {
+  header {
+    margin-bottom: 1rem;
+  }
+  header h1{
+    font-size:1.3rem;
+  }
+  #home-buttons{
+    margin-top: 0;
+    flex-direction: column;
+    height: 500px;
+  }
+  #home-buttons a{
+    flex-direction: column;
+    height: 150px;
+    line-height: 50px;
+    width:100%;
+  }
+}
+

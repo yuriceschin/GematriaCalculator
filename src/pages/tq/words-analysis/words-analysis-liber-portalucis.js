@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberTzaddiCsv.edges,
+      data: this.props.data.allRecurrencesliberPortalucisCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,15 +81,15 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Liber Tzaddi vel Hamus Hermeticus - Words value and recurrences</h2>
+        <SEO title={"Liber Porta Lucis Words Analysis"} />
+        <h2>Liber Porta Lucis - Words value and recurrences</h2>
 
         <p>
-          There is a total of <strong>856</strong> words in Liber Tzaddi vel
-          Hamus Hermeticus and <strong>348</strong> different words (including
-          numbers and &).
+          There is a total of <strong>678</strong> words in Liber Porta Lucis
+          and <strong>283</strong> different words (including numbers and &).
           <br />
           Here you can find each word, its value based upon the TQ Gematria and
-          the number of times it appears in Liber Tzaddi vel Hamus Hermeticus.
+          the number of times it appears in Liber Porta Lucis.
         </p>
         <div className="table">
           <div className="header">
@@ -122,7 +123,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberTzaddiCsv {
+    allRecurrencesliberPortalucisCsv {
       edges {
         node {
           word

@@ -8,7 +8,7 @@ export default ({ children }) => (
   <div>
     <header>
       <Link to="/" id="title">
-        <h1>TQ Gematria Calculator</h1>
+        <h1>Gematria Calculator</h1>
       </Link>
       <nav role="navigation" id="menu">
         <Navigation />

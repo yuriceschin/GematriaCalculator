@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberAlCsv.edges,
+      data: this.props.data.allRecurrencesliberTrigrammatonCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,13 +81,15 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Liber AL vel Legis - Words value and recurrences</h2>
+        <SEO title={"Liber Trigrammaton Words Analysis"} />
+        <h2>Liber Trigrammaton - Words value and recurrences</h2>
+
         <p>
-          There is a total of <strong>6009</strong> words in Liber AL and{" "}
-          <strong>1344</strong> different words (including numbers and &).
+          There is a total of <strong>390</strong> words in Liber Trigrammaton
+          and <strong>188</strong> different words (including numbers and &).
           <br />
           Here you can find each word, its value based upon the TQ Gematria and
-          the number of times it appears in Liber AL.
+          the number of times it appears in Liber Trigrammaton.
         </p>
         <div className="table">
           <div className="header">
@@ -120,7 +123,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberAlCsv {
+    allRecurrencesliberTrigrammatonCsv {
       edges {
         node {
           word

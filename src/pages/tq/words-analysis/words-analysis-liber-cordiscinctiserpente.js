@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberAashCsv.edges,
+      data: this.props.data.allRecurrencesliberCordiscinctiserpenteCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,35 +81,29 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>
-          Liber A’ash vel Capricorni Pneumatici - Words value and recurrences
-        </h2>
+        <SEO title={"Liber Cordis Cincti Serpente Words Analysis"} />
+        <h2>Liber Cordis Cincti Serpente - Words value and recurrences</h2>
 
         <p>
-          There is a total of <strong>1052</strong> words in Liber A’ash vel
-          Capricorni Pneumatici and <strong>419</strong> different words
-          (including numbers and &).
-          <br />
-          Here you can find each word, its value based upon the TQ Gematria and
-          the number of times it appears in Liber A’ash vel Capricorni
-          Pneumatici.
+          There is a total of <strong>646</strong> words in Liber Cordis Cincti
+          Serpente and <strong>8189</strong> different words (including numbers
+          and &). Here you can find each word, its value based upon the TQ
+          Gematria and the number of times it appears in Liber Cordis Cincti
+          Serpente.
         </p>
         <div className="table">
           <div className="header">
-            <div>
-              <button onClick={this.onSort("word")}>Word
-                <span className={`${this.setArrow("word")}`} />
-              </button>
+            <div><button onClick={this.onSort("word")}>
+              Word
+              <span className={`${this.setArrow("word")}`} /></button>
             </div>
-            <div>
-            <button onClick={this.onSort("value")}>Value
-              <span className={this.setArrow("value")} />
-              </button>
+            <div><button onClick={this.onSort("value")}>
+              Value
+              <span className={this.setArrow("value")} /></button>
             </div>
-            <div>
-            <button onClick={this.onSort("count")}>Count
-              <span className={this.setArrow("count")} />
-            </button>
+            <div><button onClick={this.onSort("count")}>
+              Count
+              <span className={this.setArrow("count")} /></button>
             </div>
           </div>
           <div className="body">
@@ -128,7 +123,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberAashCsv {
+    allRecurrencesliberCordiscinctiserpenteCsv {
       edges {
         node {
           word

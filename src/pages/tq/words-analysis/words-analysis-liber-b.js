@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberCordiscinctiserpenteCsv.edges,
+      data: this.props.data.allRecurrencesliberBCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,14 +81,15 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Liber Cordis Cincti Serpente - Words value and recurrences</h2>
+        <SEO title={"Liber B vel Magi Words Analysis"} />
+        <h2>Liber B vel Magi - Words value and recurrences</h2>
 
         <p>
-          There is a total of <strong>646</strong> words in Liber Cordis Cincti
-          Serpente and <strong>8189</strong> different words (including numbers
-          and &). Here you can find each word, its value based upon the TQ
-          Gematria and the number of times it appears in Liber Cordis Cincti
-          Serpente.
+          There is a total of <strong>646</strong> words in Liber B vel Magi and{" "}
+          <strong>244</strong> different words (including numbers and &).
+          <br />
+          Here you can find each word, its value based upon the TQ Gematria and
+          the number of times it appears in Liber B vel Magi.
         </p>
         <div className="table">
           <div className="header">
@@ -121,7 +123,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberCordiscinctiserpenteCsv {
+    allRecurrencesliberBCsv {
       edges {
         node {
           word

@@ -1,8 +1,13 @@
 module.exports = {
 siteMetadata: {
-    title: 'TQ Gematria Calculator',
-    pathPrefix: "/TQGematria",
-},
+    title: "Gematria Calculator",
+    pathPrefix: "/Gematria",
+    titleTemplate: "%s · Gematria Calculator",
+    description:
+      "Gematria or gimatria is a system of assigning numerical value to a word or phrase. Hebrew Gematria calculator is a tool to help in this task. Moreover you can find the correspondences of the Liber Sepher Sephiroth sub figurâ D",
+    url: "https://gematria.starryabode.com", // No trailing slash allowed!
+    image: "src/images/icon.png" // Path to your image you placed in the 'static' folder
+  },
 plugins: [
  	{
   	resolve: `gatsby-plugin-typography`,

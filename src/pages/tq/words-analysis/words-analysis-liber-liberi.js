@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
+import SEO from "../../../components/seo";
 
 export default class A extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data.allRecurrencesliberAraritaCsv.edges,
+      data: this.props.data.allRecurrencesliberLiberiCsv.edges,
       sort: {
         column: "count",
         direction: "desc"
@@ -80,18 +81,16 @@ export default class A extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Liber DCCCXIII vel ARARITA - Words value and recurrences</h2>
+        <SEO title={"Liber Liberi vel Lapidis Lazuli Words Analysis"} />
+        <h2>Liber Liberi vel Lapidis Lazuli - Words value and recurrences</h2>
 
         <p>
-          There is a total of <strong>1770</strong> words in Liber DCCCXIII vel
-          ARARITA and <strong>550</strong> different words (including numbers
-          and &).
+          There is a total of <strong>5803</strong> words in Liber Liberi vel
+          Lapidis Lazuli and <strong>1506</strong> different words (including
+          numbers and &).
           <br />
           Here you can find each word, its value based upon the TQ Gematria and
-          the number of times it appears in Liber DCCCXIII vel ARARITA.
-          <br />
-          The greek and hebrew words have been calculated with their relative
-          gematria values.
+          the number of times it appears in Liber Liberi vel Lapidis Lazuli.
         </p>
         <div className="table">
           <div className="header">
@@ -125,7 +124,7 @@ export default class A extends React.Component {
 
 export const IndexQuery = graphql`
   query {
-    allRecurrencesliberAraritaCsv {
+    allRecurrencesliberLiberiCsv {
       edges {
         node {
           word
