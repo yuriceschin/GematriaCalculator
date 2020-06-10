@@ -7,12 +7,16 @@ export default () => (
     <SEO title={"About Trigrammaton"} />
     <h2>Trigrammaton Qabalah (TQ)</h2>
 
-    <h4>Trigrammaton Qabalah values:</h4>
+    <h4>Trigrammaton Qabalah values (as in "The Angel & The Abyss" by J. Daniel Gunther):</h4>
     <p className="TQValues">
       A=5 B=20 C=2 D=23 E=13 F=12 G=11 H=3 I=0 J=7 K=17 L=1 M=21 N=24 <br />
       O=10 P=4 Q=16 R=14 S=15 T=9 U=25 V=22 W=8 X=6 Y=18 Z=19 &=26
     </p>
 
+    <p>"On pages 364 – 365 in J. Daniel Gunther’s "The Angel & The Abyss", there is a table “Trigrams and some useful Attributions” where the trigrams are numbered from 0 to 26. In this table Gunther uses Base 3 notation to show the “Value” of the Trigrams.
+In “The Law is for All” Crowley published his attributions of the English letters to 27 Trigrams, but he leaves the final Trigram – number 26 (remember this sequence begins at 0) with no English letter attribution. Gunther explained that this mystery plagued him for years until he came across an old alphabet training book where the Ampersand is used as the 27th letter. Apparently work has already begun to enumerate the text of Holy books to derive new equivalences."<br/><i>(Volume I, Number 2 of "T.H.O.T.H.: The House of the Holy" a <a href="http://www.twohorizons.space/" target="_blank">Two Horizons</a> Periodical)</i>
+</p>
+<h4><a href="https://en.wikipedia.org/wiki/English_Qabalah#Trigrammaton_Qabalah_(TQ)" target="_blank">Wikipedia</a></h4>
     <p>
       One system of English Qabalah with a strong English gematria component was
       proposed by R. L. Gillis in 1996, and published on his website since 1998.
@@ -27,10 +31,11 @@ export default () => (
       attributed the 26 letters of the English alphabet to these trigrams, in an
       attempt to fulfill an injunction found in his earlier work The Book of the
       Law, or Liber AL vel Legis.
-      <br />
-      <br />
-      In Liber AL, verse 2:55 states: "Thou shalt obtain the order & value of
-      the English Alphabet, thou shalt find new symbols to attribute them unto".
+    </p>
+    
+    <blockquote>Thou shalt obtain the order & value of the English Alphabet; thou shalt find new symbols to attribute them unto. <strong>(AL 2,55)</strong></blockquote>
+    
+    <p>
       By attributing the English alphabet to the trigrams of his later work,
       Crowley considered this verse to be fulfilled, as noted in his "Old
       Comment" to The Book of the Law. The TQ is an extension of Crowley's work
@@ -42,16 +47,7 @@ export default () => (
       Stratton-Kent above. In the TQ, correspondences are created with all the
       major forms of divination such as I Ching, tarot and runes, as well as
       Greek and Hebrew alphabets, the qabalistic Tree of Life, Western and Vedic
-      astrology, magic squares, and the Platonic solids of geometry. A primary
-      feature of this qabalah is a new understanding of the Cube of Space and
-      its 26 components of edges, faces and vertices, which equal the number of
-      Roman script letters used in the English alphabet.
+      astrology, magic squares, and the Platonic solids of geometry.
     </p>
-
-    <a href="https://en.wikipedia.org/wiki/English_Qabalah#Trigrammaton_Qabalah_(TQ)">
-      <blockquote cite="https://en.wikipedia.org/wiki/English_Qabalah#Trigrammaton_Qabalah_(TQ)">
-        Wikipedia
-      </blockquote>
-    </a>
   </Layout>
 );
