@@ -1,8 +1,8 @@
 {
   "name": "tq-gematria-calculator",
   "private": true,
-  "description": "A simple calculator of words's value based on the Trigrammaton Qabalah Gematria",
-  "version": "2.0.0",
+  "description": "Gematria Calculator + Holy Books of Thelema Words Analysis, based on the correspondences of Liber Trigrammaton, Liber 500 and Greek Gematria",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
