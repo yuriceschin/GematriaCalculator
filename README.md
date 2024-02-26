@@ -1,7 +1,14 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Gematria Mimmo
+  Gematria Calculator
 </h1>
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b1338e9f-ed78-4e0e-a448-66511312dff7/deploy-status)](https://app.netlify.com/sites/gematria/deploys)
+
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -10,6 +17,12 @@
 Trigrammaton Qabalah values:
 A=5 B=20 C=2 D=23 E=13 F=12 G=11 H=3 I=0 J=7 K=17 L=1 M=21 N=24
 O=10 P=4 Q=16 R=14 S=15 T=9 U=25 V=22 W=8 X=6 Y=18 Z=19 &=26
+
+Hebrew Gematria values:
+א=1 ב=2 ג=3 ד=4 ה=5 ו=6 ז=7 ח=8 ט=9 י=10 כ=20 ל=30 מ=40 נ=50 ס=60 ע=70 פ=80 צ=90 ק=100 ר=200 ש=300 ת=400
+
+Greek Gematria values:
+Αα=1 Ββ=2 Γγ=3 Δδ=4 Εε=5 Ϝϛ=6 Ζζ=7 Ηη=8 Θθ=9 Ιι=10 Κκ=20 Λλ=30 Μμ=40 Νν=50 Ξξ=60 Οο=70 Ππ=80 Ϙϙ=90 Ρρ=100 Σσς=200 Ττ=300 Υυ=400 Φφ=500 Χχ=600 Ψψ=700 Ωω=800 ϡ=900
 
 # Gematria
 Gematria or gimatria (Hebrew: גימטריה‎, gēmaṭriyā) is a system of assigning numerical value to a word or phrase, in the belief that words or phrases with identical numerical values bear some relation to each other, or bear some relation to the number itself as it may apply to a person's age, the calendar year, or the like. The word "gematria" is generally held to derive from Greek geōmetriā, "geometry", which was used a translation of gēmaṭriyā, though some scholars believe it to derive from Greek grammateia, rather; it's possible that both words had an influence on the formation of the Hebrew word. It has been extant in English since the 17th century from translations of works by Giovanni Pico della Mirandola.
