@@ -1,8 +1,8 @@
 module.exports = {
 siteMetadata: {
-    title: "Gematria Calculator",
+    title: "Gematria Mimmo",
     pathPrefix: "/Gematria",
-    titleTemplate: "%s · Gematria Calculator",
+    titleTemplate: "%s · Gematria Mimmo",
     description:
       "Gematria or gimatria is a system of assigning numerical value to a word or phrase. Hebrew Gematria calculator is a tool to help in this task. Moreover you can find the correspondences of the Liber Sepher Sephiroth sub figurâ D",
     url: "https://gematria.starryabode.com", // No trailing slash allowed!
@@ -18,8 +18,8 @@ plugins: [
 	{
 	resolve: `gatsby-plugin-manifest`,
 	    options: {
-	        name: "Gematria Calculator",
-	        short_name: "Gematria Calculator",
+	        name: "Gematria Mimmo",
+	        short_name: "Gematria Mimmo",
 	        start_url: "/",
 	        background_color: "#fafbed",
 	        theme_color: "#fafbed",
