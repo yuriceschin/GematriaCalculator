@@ -42,6 +42,6 @@
   },
   "devDependencies": {
     "babel-plugin-react-native-web": "^0.12.2",
-    "gh-pages": "^3.0.0"
+    "gh-pages": "^5.0.0"
   }
 }
