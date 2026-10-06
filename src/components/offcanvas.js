@@ -5,8 +5,15 @@ import { MdMenu, MdHighlightOff } from "react-icons/md";
 
 export default class App extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
+    mounted: false
   };
+
+  componentDidMount() {
+    // react-aria-offcanvas renders differently on server and client,
+    // so mount it only after hydration
+    this.setState({ mounted: true });
+  }
 
   open = () => {
     this.setState({ isOpen: true });
@@ -28,6 +35,7 @@ export default class App extends Component {
         >
           <MdMenu />
         </button>
+        {this.state.mounted && (
         <OffCanvas
           isOpen={this.state.isOpen}
           onClose={this.close}
@@ -44,6 +52,7 @@ export default class App extends Component {
             <Navigation />
           </nav>
         </OffCanvas>
+        )}
       </Fragment>
     );
   }
